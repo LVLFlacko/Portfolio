@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#050508" />
+  <title>Reda's Portfolio</title>
+  <meta name="description" content="Reda's Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Zen+Dots&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient / decorative layers -->
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__glow"></div>
+    <div class="bg__particles" aria-hidden="true"></div>
+  </div>
+
+  <!-- Top navigation -->
+  <header class="topbar" id="top">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand__mark" aria-hidden="true">R</span>
+        <span class="brand__text">Reda</span>
+      </a>
+
+      <div class="nav__links" role="navigation" aria-label="Primary">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#specialisations">Specialisations</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </div>
+
+      <div class="nav__actions">
+        <button class="btn btn--ghost" id="soundToggle" type="button" aria-pressed="false" title="Toggle UI sound">
+          <span class="btn__icon" aria-hidden="true">♪</span>
+          <span class="btn__text">Sound</span>
+        </button>
+
+        <button class="btn btn--primary" id="openContact" type="button" title="Quick contact">
+          <span class="btn__shine" aria-hidden="true"></span>
+          <span class="btn__text">Hire Me</span>
+        </button>
+
+        <button class="nav__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
+      <a href="#about" class="nav__mLink">About</a>
+      <a href="#specialisations" class="nav__mLink">Specialisations</a>
+      <a href="#projects" class="nav__mLink">Projects</a>
+      <a href="#contact" class="nav__mLink">Contact</a>
+      <a href="https://guns.lol/lvlflacko" class="nav__mLink" target="_blank" rel="noreferrer">Guns.lol</a>
+      <a href="https://discord.gg/eU2ntyBkqf" class="nav__mLink" target="_blank" rel="noreferrer">Discord Portfolio</a>
+    </div>
+  </header>
+
+  <main class="viewport">
+    <div class="stage" id="stage">
+      <!-- HERO -->
+      <section class="section hero" id="home" data-section>
+        <div class="hero__content">
+          <div class="kicker">
+            <span class="kicker__dot" aria-hidden="true"></span>
+            <span class="kicker__text">Portfolio</span>
+          </div>
+
+          <h1 class="hero__title">
+            <span class="hero__titleTop">Reda</span>
+            <span class="hero__titleSub">Roblox Animator</span>
+          </h1>
+
+          <p class="hero__desc">
+            I create smooth combat animations, expressive beatdowns, and polished cutscenes in Roblox.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">
+              <span class="btn__shine" aria-hidden="true"></span>
+              <span class="btn__text">View Projects</span>
+            </a>
+            <a class="btn btn--ghost" href="https://discord.gg/eU2ntyBkqf" target="_blank" rel="noreferrer">
+              <span class="btn__icon" aria-hidden="true">↗</span>
+              <span class="btn__text">Discord Portfolio</span>
+            </a>
+          </div>
+
+          <div class="hero__badges" aria-label="Highlights">
+            <div class="badge">
+              <span class="badge__label">Specialisations</span>
+              <span class="badge__value">R6 • Custom Rigs</span>
+            </div>
+            <div class="badge">
+              <span class="badge__label">Status</span>
+              <span class="badge__value">Open to work</span>
+            </div>
+            <div class="badge">
+              <span class="badge__label">Price</span>
+              <span class="badge__value">Upwards of R$ 10,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__panel" aria-hidden="true">
+          <div class="panelCard panelCard--main">
+            <div class="panelCard__hdr">
+              <div class="chip">Signature</div>
+              <div class="chip chip--ghost">Anime Style</div>
+            </div>
+            <div class="panelCard__art">
+              <div class="katana"></div>
+              <div class="scanline"></div>
+            </div>
+            <div class="panelCard__footer">
+              <div class="miniStat">
+                <span class="miniStat__k">Feel</span>
+                <span class="miniStat__v">Smooth</span>
+              </div>
+              <div class="miniStat">
+                <span class="miniStat__k">Timing</span>
+                <span class="miniStat__v">Clean</span>
+              </div>
+              <div class="miniStat">
+                <span class="miniStat__k">Style</span>
+                <span class="miniStat__v">Impact</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panelCard panelCard--small panelCard--tilt">
+            <div class="panelCard__tag">Interactive</div>
+            <div class="panelCard__smallText">Click cards to open details.</div>
+          </div>
+        </div>
+
+        <button class="scrollHint" type="button" id="scrollHint" aria-label="Scroll to next section">
+          <span class="scrollHint__mouse" aria-hidden="true"></span>
+          <span class="scrollHint__text">Scroll</span>
+        </button>
+      </section>
+
+      <!-- REPEATING NAME MARQUEE -->
+      <section class="section marqueeSection" aria-label="Scrolling banner">
+        <div class="marquee" data-marquee>
+          <div class="marquee__track" aria-hidden="true">
+            <span>REDA</span><span>REDA</span><span>REDA</span><span>REDA</span><span>REDA</span>
+            <span>REDA</span><span>REDA</span><span>REDA</span><span>REDA</span>
+          </div>
+          <div class="marquee__track marquee__track--clone" aria-hidden="true">
+            <span>REDA</span><span>REDA</span><span>REDA</span><span>REDA</span><span>REDA</span>
+            <span>REDA</span><span>REDA</span><span>REDA</span><span>REDA</span>
+          </div>
+        </div>
+        <div class="marqueeSection__sub">
+          <div class="pill">Animator</div>
+          <div class="pill pill--ghost">Roblox</div>
+          <div class="pill pill--ghost">Anime-inspired timing</div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about" data-section>
+        <div class="container">
+          <div class="sectionHdr">
+            <h2 class="h2">About</h2>
+            <p class="muted">Clean Motion, Smooth Animations, Intricate Detail.</p>
+          </div>
+
+          <div class="grid grid--2">
+            <article class="card card--press" data-open-card data-title="Who I am" data-body="Reda : Roblox Animator focused on mainly anime combat animations">
+              <div class="card__top">
+                <div class="card__icon" aria-hidden="true">✦</div>
+                <div>
+                  <h3 class="h3">Who I am</h3>
+                  <p class="muted">Reda : Roblox Animator focused on mainly anime combat animations</p>
+                </div>
+              </div>
+              <div class="card__body">
+                <ul class="list">
+                  <li>Beatdowns</li>
+                  <li>Combat Animations</li>
+                  <li>Cutscenes</li>
+                </ul>
+              </div>
+              <div class="card__foot">
+                <button class="chipBtn" type="button" data-open="contact">Quick Contact</button>
+                <a class="chipBtn chipBtn--ghost" href="https://guns.lol/lvlflacko" target="_blank" rel="noreferrer">Links ↗</a>
+              </div>
+            </article>
+
+            <article class="card card--press" data-open-card data-title="What I deliver" data-body="Animations packaged with consistent naming, clean transitions, and variation-ready structure. Expect readable silhouettes, controlled arcs, and timing tuned for responsiveness.">
+              <div class="card__top">
+                <div class="card__icon" aria-hidden="true">⚙</div>
+                <div>
+                  <h3 class="h3">What I deliver</h3>
+                  <p class="muted">Clean exports and consistent structure for top-tier production.</p>
+                </div>
+              </div>
+              <div class="card__body">
+                <div class="metricRow">
+                  <div class="metric">
+                    <div class="metric__k">Role</div>
+                    <div class="metric__v">Animator in Roblox</div>
+                  </div>
+                  <div class="metric">
+                    <div class="metric__k">Price</div>
+                    <div class="metric__v">Starting from : R$ 10,000</div>
+                  </div>
+                </div>
+                <div class="note">
+                  Click to open a quick detail panel.
+                </div>
+              </div>
+              <div class="card__foot">
+                <button class="chipBtn" type="button" data-open="projects">Jump to Projects</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPECIALISATIONS -->
+      <section class="section" id="specialisations" data-section>
+        <div class="container">
+          <div class="sectionHdr">
+            <h2 class="h2">Specialisations</h2>
+            <p class="muted">Standard, Premium</p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="tile" data-open-card data-title="R6 Animations" data-body="Combat loops, movement sets, beatdowns, and ability sequences tuned for responsiveness and clarity. Designed for gameplay readability and strong impact.">
+              <div class="tile__hdr">
+                <div class="tile__title">R6 Animations</div>
+                <div class="tile__chip">Core</div>
+              </div>
+              <p class="tile__desc">Combat loops, movement sets, beatdowns, and ability sequences tuned for responsiveness.</p>
+              <div class="tile__meta">
+                <span class="tag">Readable</span>
+                <span class="tag">Snappy</span>
+                <span class="tag">Loop-ready</span>
+              </div>
+            </article>
+
+            <article class="tile" data-open-card data-title="Custom Rig Animations" data-body="Stylized performance with clean arcs, deliberate posing, and controlled secondary motion. Built to match anime pacing while staying production-friendly.">
+              <div class="tile__hdr">
+                <div class="tile__title">Custom Rig Animations</div>
+                <div class="tile__chip tile__chip--ghost">Advanced</div>
+              </div>
+              <p class="tile__desc">Stylized performance with clean arcs, deliberate posing, and controlled secondary motion.</p>
+              <div class="tile__meta">
+                <span class="tag">Expressive</span>
+                <span class="tag">Pose-driven</span>
+                <span class="tag">Anime timing</span>
+              </div>
+            </article>
+
+            <article class="tile tile--cta" data-open-card data-title="Commission Flow" data-body="1) Reference + brief  2) Blocking pass  3) Polish + export. Simple workflow to keep revisions fast and quality consistent.">
+              <div class="tile__hdr">
+                <div class="tile__title">Commission Flow</div>
+                <div class="tile__chip tile__chip--ghost">Process</div>
+              </div>
+              <ol class="steps">
+                <li><span class="steps__n">01</span> Reference + Brief</li>
+                <li><span class="steps__n">02</span> Deposit</li>
+                <li><span class="steps__n">03</span> Polish + Export + Full Payment</li>
+              </ol>
+              <div class="tile__meta">
+                <button class="chipBtn" type="button" data-open="contact">Start a Commission</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects" data-section>
+        <div class="container">
+          <div class="sectionHdr sectionHdr--row">
+            <div>
+              <h2 class="h2">Projects</h2>
+              <p class="muted">Selected Roblox titles and ongoing work.</p>
+            </div>
+
+            <div class="filters" aria-label="Project filters">
+              <button class="filter is-active" type="button" data-filter="all">All</button>
+              <button class="filter" type="button" data-filter="anime">Anime</button>
+              <button class="filter" type="button" data-filter="combat">Combat</button>
+              <button class="filter" type="button" data-filter="other">More</button>
+            </div>
+          </div>
+
+          <div class="grid grid--3" id="projectGrid">
+            <button class="project" type="button"
+              data-open-card
+              data-tags="anime combat"
+              data-title="Anime Ultimate Battlegrounds"
+              data-body="Ability animations with sharp hits, clean recoveries, and consistent tempo. Built to read clearly during fast combat and to pair cleanly with VFX.">
+              <div class="project__top">
+                <div class="project__badge">Featured</div>
+                <div class="project__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              </div>
+              <h3 class="project__title">Anime Ultimate Battlegrounds</h3>
+              <p class="project__desc"> - Created ALL animations ingame</p>
+              <div class="project__tags">
+                <span class="tag">Anime</span><span class="tag">Combat</span><span class="tag">VFX-ready</span>
+              </div>
+            </button>
+
+            <button class="project" type="button"
+              data-open-card
+              data-tags="anime combat"
+              data-title="Anime Siege"
+              data-body="Gameplay-first movement and attacks; readable silhouettes under pressure. Smooth transitions and consistent rhythm for combos and loops.">
+              <div class="project__top">
+                <div class="project__badge project__badge--ghost">Project</div>
+                <div class="project__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              </div>
+              <h3 class="project__title">Anime Siege</h3>
+              <p class="project__desc"> - Created ALL animations ingame</p>
+              <div class="project__tags">
+                <span class="tag">Anime</span><span class="tag">Loop</span><span class="tag">Timing</span>
+              </div>
+            </button>
+
+            <button class="project" type="button"
+              data-open-card
+              data-tags="combat other"
+              data-title="Cursed Arena"
+              data-body="Impact-centric sequences with punchy anticipation and controlled secondary motion. Strong pose clarity and tight recoveries to keep combat snappy.">
+              <div class="project__top">
+                <div class="project__badge project__badge--ghost">Project</div>
+                <div class="project__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              </div>
+              <h3 class="project__title">Cursed Arena</h3>
+              <p class="project__desc"> - Created many Animations ingame</p>
+              <div class="project__tags">
+                <span class="tag">Combat</span><span class="tag">Polish</span><span class="tag">Snappy</span>
+              </div>
+            </button>
+
+            <button class="project" type="button"
+              data-open-card
+              data-tags="other"
+              data-title="Many more"
+              data-body="More Roblox projects are available via the Discord portfolio. If you want a specific style (combat, movement, beatdowns), message me on Discord.">
+              <div class="project__top">
+                <div class="project__badge project__badge--ghost">More</div>
+                <div class="project__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              </div>
+              <h3 class="project__title">Many Other Projects</h3>
+              <p class="project__desc">Additional Roblox projects available on request and via the Discord portfolio.</p>
+              <div class="project__tags">
+                <span class="tag">Roblox</span><span class="tag">Commission</span><span class="tag">Request</span>
+              </div>
+            </button>
+
+            <div class="project project--empty" id="emptyState" hidden>
+              <h3 class="project__title">No matches</h3>
+              <p class="project__desc">Try another filter.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact" data-section>
+        <div class="container">
+          <div class="sectionHdr">
+            <h2 class="h2">Contact</h2>
+            <p class="muted">Fastest response: Discord.</p>
+          </div>
+
+          <div class="grid grid--2">
+            <article class="card card--press" data-open-card data-title="Discord Contact" data-body="Primary contact: @stayingfly. Use the Discord portfolio link for references and style direction.">
+              <div class="card__top">
+                <div class="card__icon" aria-hidden="true">✉</div>
+                <div>
+                  <h3 class="h3">Discord</h3>
+                  <p class="muted">Primary contact</p>
+                </div>
+              </div>
+              <div class="card__body">
+                <div class="copyRow">
+                  <div class="copyRow__label">Handle</div>
+                  <div class="copyRow__value" id="discordHandle">@stayingfly</div>
+                  <button class="copyBtn" type="button" data-copy="#discordHandle">Copy</button>
+                </div>
+
+                <div class="linkRow">
+                  <a class="linkBtn" href="https://discord.gg/eU2ntyBkqf" target="_blank" rel="noreferrer">Discord Portfolio ↗</a>
+                  <a class="linkBtn linkBtn--ghost" href="https://guns.lol/lvlflacko" target="_blank" rel="noreferrer">Guns.lol ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--press" data-open-card data-title="How to reach me" data-body="Send a short message with: rig type (R6/custom), number of animations, style references, and deadline. I’ll reply with availability.">
+              <div class="card__top">
+                <div class="card__icon" aria-hidden="true">⌁</div>
+                <div>
+                  <h3 class="h3">How to message</h3>
+                  <p class="muted">Instructions</p>
+                </div>
+              </div>
+              <div class="card__body">
+                <ul class="list">
+                  <li>Rig type (R6 / Custom)</li>
+                  <li>Animation count + types</li>
+                  <li>Reference clips / style</li>
+                  <li>Deadline</li>
+                </ul>
+              </div>
+              <div class="card__foot">
+                <button class="chipBtn" type="button" data-open="contact">Open Contact</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__left">
+            <span class="footer__logo">Reda</span>
+            <span class="footer__sep" aria-hidden="true">•</span>
+            <span class="muted">Roblox Animator</span>
+          </div>
+          <div class="footer__right">
+            <a href="#top" class="footer__link">Back to top</a>
+            <span class="footer__sep" aria-hidden="true">•</span>
+            <button class="footer__link" type="button" id="toggleTheme">Toggle Theme</button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Modal: Contact -->
+  <dialog class="modal" id="contactModal" aria-label="Quick contact">
+    <div class="modal__hdr">
+      <div class="modal__title">Contact Reda</div>
+      <button class="modal__close" id="closeContact" type="button" aria-label="Close">✕</button>
+    </div>
+
+    <div class="modal__body">
+      <div class="modalCard">
+        <div class="modalCard__k">Discord</div>
+        <div class="modalCard__v">
+          <span class="mono" id="discordHandle2">@stayingfly</span>
+          <button class="copyBtn" type="button" data-copy="#discordHandle2">Copy</button>
+        </div>
+      </div>
+
+      <div class="modalActions">
+        <a class="btn btn--primary" href="https://discord.gg/eU2ntyBkqf" target="_blank" rel="noreferrer">
+          <span class="btn__shine" aria-hidden="true"></span>
+          <span class="btn__text">Open Discord Portfolio</span>
+        </a>
+        <a class="btn btn--ghost" href="https://guns.lol/lvlflacko" target="_blank" rel="noreferrer">
+          <span class="btn__text">Open Guns.lol</span>
+        </a>
+      </div>
+
+      <div class="modalHint muted">
+        Tip: Share rig type, animation count, references, and deadline.
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal: Card details -->
+  <dialog class="modal" id="detailModal" aria-label="Details">
+    <div class="modal__hdr">
+      <div class="modal__title" id="detailTitle">Details</div>
+      <button class="modal__close" id="closeDetail" type="button" aria-label="Close">✕</button>
+    </div>
+    <div class="modal__body">
+      <p class="modal__p" id="detailBody">...</p>
+      <div class="modalActions">
+        <button class="btn btn--ghost" id="detailCloseBtn" type="button">
+          <span class="btn__text">Close</span>
+        </button>
+        <button class="btn btn--primary" id="detailContactBtn" type="button">
+          <span class="btn__shine" aria-hidden="true"></span>
+          <span class="btn__text">Contact</span>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <div class="toast__dot" aria-hidden="true"></div>
+    <div class="toast__text" id="toastText">Copied.</div>
+  </div>
+
+  <script defer src="app.js"></script>
+</body>
+</html>
